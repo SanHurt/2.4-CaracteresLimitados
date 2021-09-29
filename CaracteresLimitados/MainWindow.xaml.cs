@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace CaracteresLimitados
 {
@@ -20,9 +9,23 @@ namespace CaracteresLimitados
     /// </summary>
     public partial class MainWindow : Window
     {
+        int contador = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+        public void ActualizarContador()
+        {
+            contador = textoTextBox.Text.Length;
+            contadorTextBox.Text = contador.ToString();
+        }
+
+        private void textoTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            ActualizarContador();
+            if (contador >= 140)
+                textoTextBox.IsReadOnly = true;
+            
         }
     }
 }

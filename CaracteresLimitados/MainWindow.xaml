@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CaracteresLimitados"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Caracteres limitados"
+        Height="450"
+        Width="800"
+        Icon="Assets/icon.ico">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1"
+                                 StartPoint="0.5,0">
+                <GradientStop Color="White"
+                              Offset="1" />
+                <GradientStop Color="#FFFF0023" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="textoTextBox"
+                 HorizontalAlignment="Left"
+                 Height="350"
+                 Margin="40,31,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="720"
+                 AcceptsReturn="True" 
+                 TextChanged="textoTextBox_TextChanged"/>
+        <TextBlock x:Name="contadorTextBox"
+                   HorizontalAlignment="Left"
+                   Margin="708,393,0,0"
+                   TextWrapping="Wrap"
+                   Text="0"
+                   VerticalAlignment="Top"
+                   RenderTransformOrigin="-1.389,0.521" />
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="719,393,0,0"
+                   TextWrapping="Wrap"
+                   Text="/140"
+                   VerticalAlignment="Top" />
+
     </Grid>
 </Window>
