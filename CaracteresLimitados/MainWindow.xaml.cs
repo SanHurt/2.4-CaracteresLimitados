@@ -27,6 +27,8 @@ namespace CaracteresLimitados
 
         private void textoTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
+            /*Llamo al método para una buena "práctica".
+             Así si aquí hubiese más código, este método sería más legible*/
             ActualizarContador();
         }
     }
