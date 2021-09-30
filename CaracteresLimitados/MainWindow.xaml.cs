@@ -16,6 +16,7 @@ namespace CaracteresLimitados
             InitializeComponent();
             
             contadorTextBox.Text = contador.ToString() + CARACTERES_MAXIMOS;
+            textoTextBox.MaxLength = 140;
         }
         public void ActualizarContador()
         {
